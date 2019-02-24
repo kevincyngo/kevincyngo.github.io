@@ -5,38 +5,38 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kevin Ngo</title>
-	<link href="materialize/css/materialize.css" rel="stylesheet" type="text/css">
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-
+	<link href="libs/materialize/css/materialize.css" rel="stylesheet" type="text/css">
+	<link href="lib/styles.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	<script src="lib/scripts.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css">
+	<script src="lib/materialize/js/materialize.min.js"></script>
+
 
 </head>
 
 <body>
 
-	<nav class='nav-wrapper light-blue lighten-2'>
-		<a class='brand-logo left' data-activates='slide-out'>
+	<nav class='nav-wrapper blue darken-4'>
+		<a class='brand-logo left' style="margin-left:5px;">
 			Kevin Ngo
 		</a>
 
 		<!-- contact - linkedin, email -->
 		<ul class='right hide-on-small'>
-			<li><a href="">Home</a></li>
-			<li><a href="">Projects</a></li>
-			<li><a href="">Contact</a></li>
+			<li><a class="button" onclick="home_page()">Home</a></li>
+			<li><a class="button" onclick="projects_page()">Projects</a></li>
+			<li><a class="button" onclick="contact_page()">Contact</a></li>
 		</ul>
 	</nav>
 
-	<div class="row">
-
+	<div id="home-page" class="row" style="display: block;">
 		<div class="col s10 m4 l3 offset-s1 offset-m1 offset-l1">
 			<div id="about-me" class="card">
 				<div class="card-image">
 					<img src="images/placeholder.jpg">
-					<span class="card-title">About Me</span>
+					<span class="card-title"><b>About Me</b></span>
 				</div>
 				<div class="card-content">
 					<p>I am a fourth year computer science at the University of Waterloo with
@@ -47,13 +47,14 @@
 				<div class="card-action">
 					<a href="https://github.com/kevincyngo" target="_blank">GitHub</a>
 					<a href="https://www.linkedin.com/in/kevin-ngo-63b407a6/" target="_blank">LinkedIn</a>
+					<a href="/docs/Resume.pdf" download>Resume</a>
 				</div>
 			</div>
 
 			<div id="my-skills" class="card">
 				<div class="card-image">
 					<img src="images/skills.png">
-					<span class="card-title">Skills</span>
+					<span class="card-title"><b>Skills</b></span>
 				</div>
 				<div class="card-content">
 					<tr>
@@ -81,11 +82,11 @@
 			</div>
 
 		</div>
-		<div class="col s10 m7 l8 offset-s1">
+		<div class="col s10 m7 l7">
 			<div id="work-experience" class="card">
 				<div class="card-image">
 					<img src="images/work-experience.jpg">
-					<span class="card-title">Work Experience</span>
+					<span class="card-title"><b>Work Experience</b></span>
 				</div>
 
 				<div class="card-content">
@@ -96,7 +97,7 @@
 								<b style="margin-top:5px;margin-left:5px">QA Engineering Intern</b>
 								<span style="margin-top:5px;margin-left:10px">Sept 2017 - Apr 2018</span>
 							</div>
-							<div class="collapsible-body">
+							<div class="card-content collapsible-body">
 								Optimized daily UI automation test runs by 20%.
 								<br> <br>
 								• Developed automated UI test scripts (Java, Selenium WebDriver)
@@ -116,7 +117,7 @@
 								<span style="margin-top:5px;margin-left:10px">Jan 2017 - Apr 2017</span>
 
 							</div>
-							<div class="collapsible-body">
+							<div class="card-content collapsible-body">
 								Created UI framework to test marketing campaigns from ground-up.
 								<br> <br>
 								• Developed and maintained API test scripts (Java)
@@ -137,7 +138,7 @@
 								<span style="margin-top:5px;margin-left:10px">May 2016 - Aug 2016</span>
 
 							</div>
-							<div class="collapsible-body">
+							<div class="card-content collapsible-body">
 								Created Python scripts to send binary packets to image warping devices.
 								<br> <br>
 								• Independently managed testing, bug reporting, and maintenance of test management
@@ -154,7 +155,7 @@
 								<b style="margin-top:5px;margin-left:5px">Jr. QA Analyst</b>
 								<span style="margin-top:5px;margin-left:10px">Sept 2015 - Dec 2015</span>
 							</div>
-							<div class="collapsible-body">
+							<div class="card-content collapsible-body">
 								Performed routine QA tasks and developed strong understanding of testing requirements.
 								<br> <br>
 								• Created automation test scripts (Java, Selenium WebDriver, JUnit)
@@ -174,19 +175,32 @@
 			<div id="education" class="card">
 				<div class="card-image">
 					<img src="images/education.png">
-					<span class="card-title">Education</span>
+					<span class="card-title"><b>Education</b></span>
 				</div>
 				<div class="card-content">
-					hello
+					• University of Waterloo, Bachelor's of Computer Science
+					<br><br>
+					• Graduating April 2019
 				</div>
 
 			</div>
 			<div id="projects" class="card">
-				<span class="card-title">Projects</span>
+				<div class="card-image">
+					<img src="images/projects.png">
+					<span class="card-title"><b>Projects</b></span>
+				</div>
 
 
 			</div>
 		</div>
+	</div>
+
+	<div id="project-page" class="row" style="display: none;">
+			projects page under development
+	</div>
+
+	<div id="contact-page" class="row" style="display: none;">
+		contact page under development
 	</div>
 
 
