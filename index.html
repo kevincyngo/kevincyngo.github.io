@@ -6,19 +6,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kevin Ngo</title>
 	<link href="libs/materialize/css/materialize.css" rel="stylesheet" type="text/css">
-	<link href="lib/styles.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="lib/scripts.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="lib/materialize/css/materialize.min.css">
 	<script src="lib/materialize/js/materialize.min.js"></script>
 	<script src="lib/materialize/js/materialize.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+	<link href="lib/quote-style.css" rel="stylesheet" />
+	<link href="lib/styles.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
 
-	<nav class='nav-wrapper blue darken-4'>
+	<nav class='nav-wrapper'>
 		<a class='brand-logo left' style="margin-left:5px;">
 			Kevin Ngo
 		</a>
@@ -32,6 +34,10 @@
 	</nav>
 
 	<div id="home-page" class="row" style="display: block;">
+		<div id="quote">
+			<script src="lib/quote.js" type="text/javascript"></script>
+			<button id="randomize" onclick="randomize()">randomize</button>
+		</div>
 		<div class="col s10 m4 l3 offset-s1 offset-m1 offset-l1">
 			<div id="about-me" class="card">
 				<div class="card-image">
@@ -41,7 +47,7 @@
 				<div class="card-content">
 					<p>I am a recent graduate from the University of Waterloo with a degree in computer science and
 						experience working as a QA automation analyst in a variety of industries.
-						My current interests are machine learning and neural networks.
+						My current interests are web development technologies.
 					</p>
 				</div>
 				<div class="card-action">

@@ -2,3 +2,11 @@
     cursor: pointer;
     
 }
+
+body {
+    background-color: rgb(232, 241, 255);
+}
+
+nav  {
+    background: linear-gradient(rgb(51, 189, 239) 5%, rgb(1, 154, 210) 100%) rgb(51, 189, 239); 
+}
