@@ -27,9 +27,8 @@
 
 		<!-- contact - linkedin, email -->
 		<ul class='right hide-on-small'>
-			<!-- <li><a class="button" onclick="home_page()">Home</a></li> -->
-			<!-- <li><a class="button" onclick="projects_page()">Projects</a></li>
-			<li><a class="button" onclick="contact_page()">Contact</a></li> -->
+			<li><a class="button" onclick="projects_page()">Projects</a></li>
+			<li><a class="button" onclick="contact_page()">Contact</a></li>
 		</ul>
 	</nav>
 
@@ -77,7 +76,7 @@
 						</td>
 						<br> <br>
 						<td>
-							<b>Web:</b> HTML, CSS, AngularJS, jQuery
+							<b>Web:</b> HTML, CSS, JS, Vue, AngularJS, jQuery
 						</td>
 						<br> <br>
 						<td>
@@ -196,18 +195,46 @@
 					<span class="card-title"><b>Projects Overview</b></span>
 				</div>
 				<div class="card-content">
+					<b>Simple Shooter game</b>
+					<br>
+					• Web shooter game. Player is required to defeat an endless wave of zombies. Winning is correlated
+					with number of zombies defeated.
+					<br>
+					• Developed using vanilla javascript, HTML, CSS
+				</div>
+				<div class="card-content">
 					<b>Media Watcher Web Application (In progress - see Git for code)</b>
 					<br>
 					• Web application designed to allow users to follow movies or tv shows releases
 					<br>
 					• Developed using jQuery, PHP, MySQL
 				</div>
-
 			</div>
 		</div>
 	</div>
+	<script src="lib/jquery.scrollUp.min.js"></script> <!-- https://github.com/markgoodyear/scrollup -->
 
+	<script>
+		//chevron scroll up
+		// jQuery Scroll Up / Back To Top Image
+		$.scrollUp({
+			scrollName: 'scrollUp',      // Element ID
+			scrollDistance: 150,         // Distance from top/bottom before showing element (px)
+			scrollFrom: 'top',           // 'top' or 'bottom'
+			scrollSpeed: 200,            // Speed back to top (ms)
+			easingType: 'linear',        // Scroll to top easing (see http://easings.net/)
+			animation: 'fade',           // Fade, slide, none
+			animationSpeed: 300,         // Animation speed (ms)		        
+			scrollText: '', // Text for element, can contain HTML		        
+			scrollImg: true            // Set true to use image		        
+		});
 
+		// ScrollUp Placement
+		$(window).on('scroll', function () {
+			$('#scrollUp').css('bottom', '30px');
+
+		});
+	</script>
 </body>
 
 </html>
