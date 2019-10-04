@@ -19,3 +19,18 @@ nav  {
     width: 38px;    /* Width of image */
     height: 38px;   /* Height of image */
 }
+
+#home-page {
+    margin:15px;
+}
+
+.card-image{
+    height: 350px; /* Your height here */
+    overflow: hidden;
+}
+
+
+/* 
+  .card{
+      height:600px;
+  } */
